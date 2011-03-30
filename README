@@ -1,0 +1,15 @@
+This is based off the scripts that the Bambuser folks have shared:
+
+http://bambuser.com/opensource
+
+Their version turns off almost all of the decoders and disables access to the
+filesystem (the file protocol). In order to generate the libs sitting in the
+jni directory I turned back on a few options and compiled their stuff. You can
+give that a try if you need to turn on additional options. But it should also
+work to just use the .a files already in the jni directory when you download
+this.
+
+Right now all this does is open up a video file from the filesystem (hardcoded
+to /sdcard/vid.3gp in native.c right now), and it'll advance frame by frame
+through the video as you hit the "Frame" button and draw the image into a
+bitmap that gets displayed on the screen.
